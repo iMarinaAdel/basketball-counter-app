@@ -5,6 +5,8 @@ void main() {
 }
 
 class BasketballPointsCounterApp extends StatefulWidget {
+  const BasketballPointsCounterApp({super.key});
+
   @override
   State<BasketballPointsCounterApp> createState() =>
       _BasketballPointsCounterAppState();
@@ -23,7 +25,7 @@ class _BasketballPointsCounterAppState
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.orange,
-          title: Text(
+          title: const Text(
             "Points Counter",
             style: TextStyle(
               color: Colors.white,
@@ -32,7 +34,7 @@ class _BasketballPointsCounterAppState
         ),
         body: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Row(
@@ -40,7 +42,7 @@ class _BasketballPointsCounterAppState
               children: [
                 Column(
                   children: [
-                    Text(
+                    const Text(
                       "team A",
                       style: TextStyle(
                         fontSize: 40,
@@ -58,44 +60,44 @@ class _BasketballPointsCounterAppState
                           teamAPoints++;
                         });
                       },
-                      child: Text(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange),
+                      child: const Text(
                         "Add Point 1",
                         style: TextStyle(color: Colors.black, fontSize: 18),
                       ),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.orange),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     ElevatedButton(
                       onPressed: () {
                         setState(() {
                           teamAPoints += 2;
                         });
                       },
-                      child: Text(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange),
+                      child: const Text(
                         "Add Point 2",
                         style: TextStyle(color: Colors.black, fontSize: 18),
                       ),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.orange),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     ElevatedButton(
                       onPressed: () {
                         setState(() {
                           teamAPoints += 3;
                         });
                       },
-                      child: Text(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange),
+                      child: const Text(
                         "Add Point 3",
                         style: TextStyle(color: Colors.black, fontSize: 18),
                       ),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.orange),
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 500,
                   child: VerticalDivider(
                     color: Color(0xffD3D4D5),
@@ -105,7 +107,7 @@ class _BasketballPointsCounterAppState
                 ),
                 Column(
                   children: [
-                    Text(
+                    const Text(
                       "team B",
                       style: TextStyle(
                         fontSize: 40,
@@ -123,40 +125,40 @@ class _BasketballPointsCounterAppState
                           teamBPoints++;
                         });
                       },
-                      child: Text(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange),
+                      child: const Text(
                         "Add Point 1",
                         style: TextStyle(color: Colors.black, fontSize: 18),
                       ),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.orange),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     ElevatedButton(
                       onPressed: () {
                         setState(() {
                           teamBPoints += 2;
                         });
                       },
-                      child: Text(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange),
+                      child: const Text(
                         "Add Point 2",
                         style: TextStyle(color: Colors.black, fontSize: 18),
                       ),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.orange),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     ElevatedButton(
                       onPressed: () {
                         setState(() {
                           teamBPoints += 3;
                         });
                       },
-                      child: Text(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange),
+                      child: const Text(
                         "Add Point 3",
                         style: TextStyle(color: Colors.black, fontSize: 18),
                       ),
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.orange),
                     )
                   ],
                 ),
@@ -171,7 +173,7 @@ class _BasketballPointsCounterAppState
                   });
                 },
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
-                child: Text(
+                child: const Text(
                   "Reset",
                   style: TextStyle(color: Colors.black, fontSize: 18),
                 )),
