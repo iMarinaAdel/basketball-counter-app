@@ -1,0 +1,184 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(BasketballPointsCounterApp());
+}
+
+class BasketballPointsCounterApp extends StatefulWidget {
+  @override
+  State<BasketballPointsCounterApp> createState() =>
+      _BasketballPointsCounterAppState();
+}
+
+class _BasketballPointsCounterAppState
+    extends State<BasketballPointsCounterApp> {
+  int teamAPoints = 0;
+
+  int teamBPoints = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.orange,
+          title: Text(
+            "Points Counter",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+        ),
+        body: Column(
+          children: [
+            SizedBox(
+              height: 30,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  children: [
+                    Text(
+                      "team A",
+                      style: TextStyle(
+                        fontSize: 40,
+                      ),
+                    ),
+                    Text(
+                      "$teamAPoints",
+                      style: TextStyle(
+                        fontSize: 200,
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          teamAPoints++;
+                        });
+                      },
+                      child: Text(
+                        "Add Point 1",
+                        style: TextStyle(color: Colors.black, fontSize: 18),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange),
+                    ),
+                    SizedBox(height: 10),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          teamAPoints += 2;
+                        });
+                      },
+                      child: Text(
+                        "Add Point 2",
+                        style: TextStyle(color: Colors.black, fontSize: 18),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange),
+                    ),
+                    SizedBox(height: 10),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          teamAPoints += 3;
+                        });
+                      },
+                      child: Text(
+                        "Add Point 3",
+                        style: TextStyle(color: Colors.black, fontSize: 18),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 500,
+                  child: VerticalDivider(
+                    color: Color(0xffD3D4D5),
+                    thickness: 1,
+                    indent: 30,
+                  ),
+                ),
+                Column(
+                  children: [
+                    Text(
+                      "team B",
+                      style: TextStyle(
+                        fontSize: 40,
+                      ),
+                    ),
+                    Text(
+                      "$teamBPoints",
+                      style: TextStyle(
+                        fontSize: 200,
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          teamBPoints++;
+                        });
+                      },
+                      child: Text(
+                        "Add Point 1",
+                        style: TextStyle(color: Colors.black, fontSize: 18),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange),
+                    ),
+                    SizedBox(height: 10),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          teamBPoints += 2;
+                        });
+                      },
+                      child: Text(
+                        "Add Point 2",
+                        style: TextStyle(color: Colors.black, fontSize: 18),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange),
+                    ),
+                    SizedBox(height: 10),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          teamBPoints += 3;
+                        });
+                      },
+                      child: Text(
+                        "Add Point 3",
+                        style: TextStyle(color: Colors.black, fontSize: 18),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orange),
+                    )
+                  ],
+                ),
+              ],
+            ),
+            const Spacer(),
+            ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    teamAPoints = 0;
+                    teamBPoints = 0;
+                  });
+                },
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
+                child: Text(
+                  "Reset",
+                  style: TextStyle(color: Colors.black, fontSize: 18),
+                )),
+            const Spacer(),
+          ],
+        ),
+      ),
+    );
+  }
+}
