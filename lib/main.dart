@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(BasketballPointsCounterApp());
+  runApp(const BasketballPointsCounterApp());
 }
 
 class BasketballPointsCounterApp extends StatefulWidget {
